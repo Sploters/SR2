@@ -23,25 +23,6 @@ public:
     _NNS_TEXLIST* m_apsTexList[2];     // offset 0x20, size 0x8
 };
 
-// total size: 0xCC
-class clsGPFan_Task : public clsMultiShape,
-                      public clsBaseGimmickBody<clsGPFan_Task, clsGPFan_Obj, clsGPFanModel> {
-public:
-    clsGPFan_Task(u32 u32ObjectAreaNum);
-    virtual ~clsGPFan_Task();
-
-    void setDrawTexNo(u32 param_1);
-    u32 getDrawTexNo() { return m_u32DrawTexNo; }
-
-    virtual void execute();
-    virtual void draw();
-    virtual void reset();
-    void createModel(stcBinInfo& rsBinInfoI);
-
-    clsGmkBurnLight_Task<clsModelType_OB_TX_MO_MA>* m_pcBurnLightTask; // offset 0xC4, size 0x4
-    u32 m_u32DrawTexNo;                                                // offset 0xC8, size 0x4
-};
-
 enum enmGPFanMode {
     MODE_INIT = 0,
     MODE_MAIN = 1,
@@ -74,6 +55,25 @@ public:
     virtual nspPackId::enm getPackId() const;
     virtual u8 checkRequestDrawDebris();
     u32 getTexNo() const;
+};
+
+// total size: 0xCC
+class clsGPFan_Task : public clsMultiShape,
+                      public clsBaseGimmickBody<clsGPFan_Task, clsGPFan_Obj, clsGPFanModel> {
+public:
+    clsGPFan_Task(u32 u32ObjectAreaNum);
+    virtual ~clsGPFan_Task();
+
+    void setDrawTexNo(u32 param_1);
+    u32 getDrawTexNo() { return m_u32DrawTexNo; }
+
+    virtual void execute();
+    virtual void draw();
+    virtual void reset();
+    void createModel(stcBinInfo& rsBinInfoI);
+
+    clsGmkBurnLight_Task<clsModelType_OB_TX_MO_MA>* m_pcBurnLightTask; // offset 0xC4, size 0x4
+    u32 m_u32DrawTexNo;                                                // offset 0xC8, size 0x4
 };
 
 #endif // ST14GPFAN_HPP

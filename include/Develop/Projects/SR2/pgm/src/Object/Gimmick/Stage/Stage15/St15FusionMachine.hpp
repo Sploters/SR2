@@ -22,31 +22,6 @@ public:
 
 class clsFusionMachine_Obj;
 
-// total size: 0xD0
-class clsFusionMachine_Task : public clsSingleModelGimmick_Task<clsFusionMachine_Task,
-                                                                clsFusionMachine_Obj,
-                                                                clsFusionMachineModels> {
-public:
-    clsFusionMachine_Task(u32 packId);
-    virtual ~clsFusionMachine_Task() {}
-    virtual void execute();
-    virtual void draw();
-    virtual void reset();
-    virtual void createModel(stcBinInfo& param_1);
-
-    u8 m_bDebugReturnStartRateDisp; // offset 0xBC, size 0x1
-    u8 m_bDebugReturnEndRateDisp;   // offset 0xBD, size 0x1
-    s32 m_s32DebugAttackType;       // offset 0xC0, size 0x4
-    u8 m_bDebugAttackRateDisp;      // offset 0xC4, size 0x1
-    u8 m_bDebugPosDisp;             // offset 0xC5, size 0x1
-    u8 m_bDebugDistanceDisp;        // offset 0xC6, size 0x1
-    u8 m_bDebugLengthRateDisp;      // offset 0xC7, size 0x1
-    u8 m_bDebugHPDisp;              // offset 0xC8, size 0x1
-    u8 m_bDebugBossStop;            // offset 0xC9, size 0x1
-    u8 m_bDebugAttackEnable;        // offset 0xCA, size 0x1
-    f32 m_f32Count;                 // offset 0xCC, size 0x4
-};
-
 // total size: 0x440
 class clsFusionMachine_Obj : public clsPhantomGimmickObject {
 public:
@@ -232,6 +207,31 @@ public:
     clsTask* m_apcLoopParticle[3];                // offset 0x3E0, size 0xC
     f32 m_sLineDrawMtx[4][4];                     // offset 0x3F0, size 0x40
     clsBackLineEffectTask* m_apcLineTask[2];      // offset 0x430, size 0x8
+};
+
+// total size: 0xD0
+class clsFusionMachine_Task : public clsSingleModelGimmick_Task<clsFusionMachine_Task,
+                                                                clsFusionMachine_Obj,
+                                                                clsFusionMachineModels> {
+public:
+    clsFusionMachine_Task(u32 packId);
+    virtual ~clsFusionMachine_Task() {}
+    virtual void execute();
+    virtual void draw();
+    virtual void reset();
+    virtual void createModel(stcBinInfo& param_1);
+
+    u8 m_bDebugReturnStartRateDisp; // offset 0xBC, size 0x1
+    u8 m_bDebugReturnEndRateDisp;   // offset 0xBD, size 0x1
+    s32 m_s32DebugAttackType;       // offset 0xC0, size 0x4
+    u8 m_bDebugAttackRateDisp;      // offset 0xC4, size 0x1
+    u8 m_bDebugPosDisp;             // offset 0xC5, size 0x1
+    u8 m_bDebugDistanceDisp;        // offset 0xC6, size 0x1
+    u8 m_bDebugLengthRateDisp;      // offset 0xC7, size 0x1
+    u8 m_bDebugHPDisp;              // offset 0xC8, size 0x1
+    u8 m_bDebugBossStop;            // offset 0xC9, size 0x1
+    u8 m_bDebugAttackEnable;        // offset 0xCA, size 0x1
+    f32 m_f32Count;                 // offset 0xCC, size 0x4
 };
 
 #endif // ST15FUSIONMACHINE_HPP

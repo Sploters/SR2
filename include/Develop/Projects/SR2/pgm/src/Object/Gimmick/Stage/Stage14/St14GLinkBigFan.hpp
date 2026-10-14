@@ -26,21 +26,6 @@ public:
     clsModelType_OB_TX m_cModelBlade; // offset 0x8, size 0x8
 };
 
-// total size: 0xA0
-class clsGLinkFan_Task
-    : public clsBaseGimmickBody<clsGLinkFan_Task, clsGLinkFan_Object, clsGLinkFanModel> {
-public:
-    clsGLinkFan_Task(u32 u32ObjectAreaNum);
-    virtual ~clsGLinkFan_Task();
-
-    virtual void execute();
-    virtual void draw();
-    virtual void reset();
-    void createModel(stcBinInfo& rsBinInfoI);
-
-    clsGmkBurnLight_Task<clsModelType_OB_TX_MO_MA>* m_pcBurnLightTask; // offset 0x9C, size 0x4
-};
-
 enum enmStateType {
     TYPE_UPPER = 0,
     TYPE_LOWER = 1,
@@ -127,6 +112,21 @@ public:
     clsSe3DControl* m_pcSe3DControl;     // offset 0x490, size 0x4
     s32 m_A32RotateSpeed;                // offset 0x494, size 0x4
     enmFanMode m_eFanMode;               // offset 0x498, size 0x4
+};
+
+// total size: 0xA0
+class clsGLinkFan_Task
+    : public clsBaseGimmickBody<clsGLinkFan_Task, clsGLinkFan_Object, clsGLinkFanModel> {
+public:
+    clsGLinkFan_Task(u32 u32ObjectAreaNum);
+    virtual ~clsGLinkFan_Task();
+
+    virtual void execute();
+    virtual void draw();
+    virtual void reset();
+    void createModel(stcBinInfo& rsBinInfoI);
+
+    clsGmkBurnLight_Task<clsModelType_OB_TX_MO_MA>* m_pcBurnLightTask; // offset 0x9C, size 0x4
 };
 
 #endif // ST14GLINKBIGFAN_HPP
