@@ -31,7 +31,11 @@ class clsCollision : public clsObject {};
 class clsBaseGimmickHead : public clsTask {
 public:
     clsBaseGimmickHead(u32 packId, u32 objectMax) : clsTask(packId, 0) {}
-    virtual ~clsBaseGimmickHead() {}
+    virtual ~clsBaseGimmickHead()
+    {
+        delete m_pcPhantomShape;
+        delete m_pcRigidShape;
+    }
 
     virtual void execute() {}
     virtual void draw() {}
