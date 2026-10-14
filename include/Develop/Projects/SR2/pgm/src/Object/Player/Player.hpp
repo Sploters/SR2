@@ -177,6 +177,7 @@ enum enPlayerCtrlType {
 
 #include "Develop/Projects/SR2/pgm/src/Data/PathData.hpp"
 #include "Develop/Projects/SR2/pgm/src/Effect/GearChenge/FlyAction.hpp"
+#include "usr/local/sega/nn/src/System/nnsystem.h"
 
 // total size: 0x18
 class _ActionFuncTbl {
@@ -612,10 +613,10 @@ public:
     u8 m_bDispCoursePoint;                           // offset 0xC5, size 0x1
     clsPlayerDebug* m_pcDebug;                       // offset 0xC8, size 0x4
     s32 m_s32SfId[23];                               // offset 0xCC, size 0x5C
-    f32 m_sDrawMtx[2][4][4];                         // offset 0x130, size 0x80
-    f32 m_sEffMtx[4][4];                             // offset 0x1B0, size 0x40
-    f32 m_asBoardMtx[4][4][4];                       // offset 0x1F0, size 0x100
-    f32 m_sGearDrawMtx[4][4];                        // offset 0x2F0, size 0x40
+    NNS_MATRIX m_sDrawMtx[2];                        // offset 0x130, size 0x80
+    NNS_MATRIX m_sEffMtx;                            // offset 0x1B0, size 0x40
+    NNS_MATRIX m_asBoardMtx[4];                      // offset 0x1F0, size 0x100
+    NNS_MATRIX m_sGearDrawMtx;                       // offset 0x2F0, size 0x40
     NNS_VECTORFAST m_sPosVecFast[2];                 // offset 0x330, size 0x20
     NNS_VECTORFAST m_sUpVecFast;                     // offset 0x350, size 0x10
     NNS_VECTORFAST m_sPreUpVecFast;                  // offset 0x360, size 0x10
@@ -730,7 +731,7 @@ public:
     clsTask* m_apcLoopParticle[4];                   // offset 0xF60, size 0x10
     clsTask* m_apcLoopEffect[4];                     // offset 0xF70, size 0x10
     NNS_VECTORFAST m_asNodePos[8];                   // offset 0xF80, size 0x80
-    f32 m_asNodeMatrix[8][4][4];                     // offset 0x1000, size 0x200
+    NNS_MATRIX m_asNodeMatrix[8];                    // offset 0x1000, size 0x200
     clsBackLineEffectTask* m_pcBackLineTask;         // offset 0x1200, size 0x4
     clsVaporTrail_Task* m_pcVaporTrailTask;          // offset 0x1204, size 0x4
     clsVaporTrail_Task* m_pcSlipStreamTask;          // offset 0x1208, size 0x4

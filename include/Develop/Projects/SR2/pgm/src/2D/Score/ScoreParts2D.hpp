@@ -3,6 +3,7 @@
 
 #include "types.h"
 #include "Develop/Projects/SR2/pgm/src/Object/Player/Lap.hpp"
+#include "usr/local/sega/nn/src/System/nnsystem.h"
 
 class clsPlayerTask;
 class clsEnergyFlow2D;
@@ -106,7 +107,7 @@ public:
         f32 f32BackGroundWidth; // offset 0x1C, size 0x4
         f32 f32EnergyFrameMax;  // offset 0x20, size 0x4
         s32 s32RingRot;         // offset 0x24, size 0x4
-        f32 sRingMtx[4][4] __attribute__((aligned(16))); // offset 0x30, size 0x40
+        NNS_MATRIX sRingMtx;    // offset 0x30, size 0x40
         u8 FrameTexNo;          // offset 0x70, size 0x1
         u8 FrameLineTexNo;      // offset 0x71, size 0x1
         u8 NumBackTexNo;        // offset 0x72, size 0x1

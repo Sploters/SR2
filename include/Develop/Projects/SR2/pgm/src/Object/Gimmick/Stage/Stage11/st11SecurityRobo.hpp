@@ -5,6 +5,7 @@
 #include "Develop/Projects/SR2/pgm/src/Object/Gimmick/RigidBodyGimmickObj.hpp"
 #include "Develop/Projects/SR2/pgm/src/Object/Gimmick/GimmickPath.hpp"
 #include "Develop/Projects/SR2/pgm/src/Object/Gimmick/Control/Se3DControl.hpp"
+#include "usr/local/sega/nn/src/System/nnsystem.h"
 
 class clsSt11SecurityRoboModels;
 class clsModelType_OB_TX_MO;
@@ -55,7 +56,7 @@ public:
     f32 m_f32RotCounter;                           // offset 0x2A4, size 0x4
     f32 m_f32RotZ;                                 // offset 0x2A8, size 0x4
     u32 m_u32FrameCounter;                         // offset 0x2AC, size 0x4
-    f32 m_sDrawMtx[4][4];                          // offset 0x2B0, size 0x40
+    NNS_MATRIX m_sDrawMtx;                         // offset 0x2B0, size 0x40
     clsBackLineEffectTask* m_apcLineTask[2];       // offset 0x2F0, size 0x8
     u8 m_bIsBackLine;                              // offset 0x2F8, size 0x1
     enmPathSide m_ePathSide;                       // offset 0x2FC, size 0x4

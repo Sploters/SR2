@@ -7,6 +7,7 @@
 #include "Develop/Projects/SR2/pgm/src/Effect/Particle/ParticleBase.hpp"
 #include "Develop/Projects/SR2/pgm/src/Effect/Particle/ParticleAbsorb.hpp"
 #include "types.h"
+#include "usr/local/sega/nn/src/System/nnsystem.h"
 
 typedef clsPlayerTask::enmCalcNodePos enmCalcNodePos;
 
@@ -26,7 +27,7 @@ public:
                        clsPlayerTask::enmCalcNodePos eBornNo,
                        f32 f32WaitFrame);
 
-    f32 m_sTrsMtx[4][4];                 // offset 0x60, size 0x40
+    NNS_MATRIX m_sTrsMtx;                // offset 0x60, size 0x40
     f32 m_f32MotionFrame;                // offset 0xA0, size 0x4
     f32 m_f32MatMotionFrame;             // offset 0xA4, size 0x4
     f32 m_f32WaitFrame;                  // offset 0xA8, size 0x4

@@ -6,6 +6,7 @@
 #include "Develop/Projects/SR2/pgm/src/Object/ModelTypes.hpp"
 #include "usr/local/sega/nn/src/Matrix/nnvector.h"
 #include "types.h"
+#include "usr/local/sega/nn/src/System/nnsystem.h"
 
 class hkShape;
 
@@ -17,7 +18,7 @@ public:
     hkShape* m_pcShape;          // offset 0xE0, size 0x4
     u32 m_u32Num;                // offset 0xE4, size 0x4
     f32 m_f32FrameScale;         // offset 0xE8, size 0x4
-    f32 m_sDrawClipMtx[4][4];    // offset 0xF0, size 0x40
+    NNS_MATRIX m_sDrawClipMtx;   // offset 0xF0, size 0x40
     u32 m_u32NotDrawFlag;        // offset 0x130, size 0x4
 
     // Static members

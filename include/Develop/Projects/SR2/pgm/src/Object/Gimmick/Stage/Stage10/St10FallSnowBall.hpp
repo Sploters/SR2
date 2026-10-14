@@ -5,6 +5,7 @@
 #include "Develop/Projects/SR2/pgm/src/Object/Gimmick/GimmickBody.hpp"
 #include "Develop/Projects/SR2/pgm/src/Object/Gimmick/RigidBodyGimmickObj.hpp"
 #include "Develop/Projects/SR2/pgm/src/Object/ModelTypes.hpp"
+#include "usr/local/sega/nn/src/System/nnsystem.h"
 
 class clsSe3DControl;
 
@@ -51,7 +52,7 @@ public:
     u8 bHitFlag;                             // offset 0xE8, size 0x1
     clsSe3DControl* m_pcSe3DControl;         // offset 0xEC, size 0x4
     u8 bDrawFlag;                            // offset 0xF0, size 0x1
-    f32 m_sShadowMtx[4][4];                  // offset 0x100, size 0x40
+    NNS_MATRIX m_sShadowMtx;                 // offset 0x100, size 0x40
 };
 
 // total size: 0x9C

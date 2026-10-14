@@ -7,6 +7,7 @@
 #include "Develop/Projects/SR2/pgm/src/Object/Gimmick/GimmickBody.hpp"
 #include "Develop/Projects/SR2/pgm/src/Object/ModelTypes.hpp"
 #include "usr/local/sega/nn/src/Matrix/nnvector.h"
+#include "usr/local/sega/nn/src/System/nnsystem.h"
 
 // total size: 0x310
 class clsMapPartsFloorSwitch_Object : public clsMapPartsObject {
@@ -37,7 +38,7 @@ public:
     enmState m_eState;               // offset 0xF0, size 0x4
     u32 m_u32Type;                   // offset 0xF4, size 0x4
     clsGimmickObj* m_pcObj[31];      // offset 0xF8, size 0x7C
-    f32 m_sEffectMtx[6][4][4];       // offset 0x180, size 0x180
+    NNS_MATRIX m_sEffectMtx[6];      // offset 0x180, size 0x180
     clsSe3DControl* m_pcSe3DControl; // offset 0x300, size 0x4
 
     clsMapPartsFloorSwitch_Object() {}

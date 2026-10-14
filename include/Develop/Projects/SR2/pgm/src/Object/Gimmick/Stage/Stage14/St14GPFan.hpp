@@ -9,6 +9,7 @@
 #include "Develop/Projects/SR2/pgm/src/Object/ModelTypes.hpp"
 #include "types.h"
 #include "usr/local/sega/nn/src/Texture/nntexture.h"
+#include "usr/local/sega/nn/src/System/nnsystem.h"
 
 class clsGPFan_Obj;
 class clsGPFanModel;
@@ -40,7 +41,7 @@ public:
     f32 m_f32Scale;                  // offset 0xDC, size 0x4
     f32 m_f32FanSpeed;               // offset 0xE0, size 0x4
     clsSe3DControl* m_pcSe3DControl; // offset 0xE4, size 0x4
-    f32 m_sEffectMatrix[4][4];       // offset 0xF0, size 0x40
+    NNS_MATRIX m_sEffectMatrix;      // offset 0xF0, size 0x40
     clsTask* m_pcEffectTask;         // offset 0x130, size 0x4
 
     static f32 tof32ClipSqDist;

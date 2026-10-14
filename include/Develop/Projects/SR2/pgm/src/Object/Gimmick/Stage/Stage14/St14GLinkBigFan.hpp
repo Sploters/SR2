@@ -11,6 +11,7 @@
 #include "Develop/Projects/SR2/pgm/src/Object/Gimmick/Control/Se3DControl.hpp"
 #include "Develop/Projects/SR2/pgm/src/Task/TaskManager.hpp"
 #include "Develop/Projects/SR2/pgm/src/Object/ModelTypes.hpp"
+#include "usr/local/sega/nn/src/System/nnsystem.h"
 
 class clsPlayerTask;
 class clsGLinkFan_Object;
@@ -77,7 +78,7 @@ public:
     u8 m_bFilterChange;              // offset 0x106, size 0x1
     u8 m_bSeFlag;                    // offset 0x107, size 0x1
     u8 m_bGravityFlag;               // offset 0x108, size 0x1
-    f32 m_sEffectMatrix[4][4];       // offset 0x110, size 0x40
+    NNS_MATRIX m_sEffectMatrix;      // offset 0x110, size 0x40
     clsTask* m_pcEffectTask;         // offset 0x150, size 0x4
 };
 
