@@ -3,11 +3,12 @@
 
 #include "types.h"
 #include "Develop/Projects/SR2/pgm/src/Task/TaskManager.hpp"
+#include "Develop/Projects/SR2/pgm/lib/OO/core/OOLibChecker.hpp"
 
 // total size: 0xC0
 class clsBaseGravityWave_Task : public clsTask {
 public:
-    virtual ~clsBaseGravityWave_Task() {}
+    virtual ~clsBaseGravityWave_Task() { nspOOLibChecker::ClassD("clsBaseGravityWave_Task"); }
     clsBaseGravityWave_Task(u32 param_1, u32 param_2)
         : clsTask(param_1, 0) {} // [verify params from ASM]
 
