@@ -54,6 +54,7 @@ void clsMissionRace_Task::wakeUpResult()
 
 void clsMissionRace_Task::setClearUnlock()
 {
+    clsMissionRace_Task::setMissionClearUnlock();
 }
 
 s8 clsMissionRace_Task::checkCondition()

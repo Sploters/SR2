@@ -51,6 +51,7 @@ void clsItemBomb_Obj::searchObj()
 
 void clsItemBomb_Obj::contactInterraction(clsRigidBodyGimmickObj* pParam1)
 {
+    clsRigidBodyGimmickObj::contactInterraction(pParam1);
 }
 
 void clsItemBomb_Obj::draw(clsModelType_OB_TX_MO_MA& rParam1,

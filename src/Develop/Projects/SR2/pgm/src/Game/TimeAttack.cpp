@@ -101,4 +101,5 @@ u8 clsTimeAttack_Task::saveGhostData()
 
 void clsTimeAttack_Task::checkPauseResult(s32 bOnI)
 {
+    clsBaseRace_Task::checkPauseResult(bOnI);
 }

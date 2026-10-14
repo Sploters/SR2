@@ -2,6 +2,7 @@
 
 void clsPlayerTask::initGearInertia()
 {
+    m_f32CurveMotionRate = 0;
 }
 
 void clsPlayerTask::actionGearInertia()
