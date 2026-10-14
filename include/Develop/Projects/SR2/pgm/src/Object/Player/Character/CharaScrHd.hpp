@@ -22,7 +22,7 @@ class clsPlayerTask;
 
 class clsCharaScrHd : public clsCharaRoboBase {
 public:
-    virtual ~clsCharaScrHd();
+    virtual ~clsCharaScrHd() {}
 
     clsCharaScrHd(clsPlayerTask* pcPlayerTask);
 

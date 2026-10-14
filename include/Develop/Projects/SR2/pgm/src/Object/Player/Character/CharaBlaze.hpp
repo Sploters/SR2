@@ -10,7 +10,7 @@ class clsPlaySe_2D;
 
 class clsCharaBlaze : public clsCharaNodeBase {
 public:
-    virtual ~clsCharaBlaze();
+    virtual ~clsCharaBlaze() {}
 
     virtual f32 getCollisionRadius() const;
     virtual f32 getDrawOffset() const;

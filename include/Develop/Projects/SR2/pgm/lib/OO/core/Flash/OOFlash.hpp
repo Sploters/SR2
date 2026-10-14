@@ -131,7 +131,7 @@ struct stcPlaceObject3 {
 // total size: 0x14
 class clsOOFMObject {
 public:
-    virtual ~clsOOFMObject();
+    virtual ~clsOOFMObject() {}
     clsOOFlashMovie* m_pcParent; // offset 0x4, size 0x4
     s32 m_s32CharID;             // offset 0x8, size 0x4
     u8 m_u8IsDraw;               // offset 0xC, size 0x1

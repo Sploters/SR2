@@ -13,7 +13,7 @@ public:
 
     clsPosturalCtrl();
     clsPosturalCtrl(const clsPosturalCtrl& rcOther);
-    ~clsPosturalCtrl();
+    ~clsPosturalCtrl() {}
 
     MtxPtr getMtxPtr() const;
     const NNS_VECTORFAST* getDirVecFastPtr() const;

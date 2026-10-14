@@ -9,7 +9,7 @@ class clsMapBurnLight_Task : public clsTask {
 public:
     clsMapBurnLight_Task(stcBinInfo& rParam1);
 
-    virtual ~clsMapBurnLight_Task();
+    virtual ~clsMapBurnLight_Task() {}
     virtual void execute();
     virtual void draw();
 

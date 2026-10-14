@@ -13,7 +13,7 @@ typedef clsPlayerTask::enmCalcNodePos enmCalcNodePos;
 // total size: 0xD0
 class clsBaseEffect_Task : public clsTask {
 public:
-    virtual ~clsBaseEffect_Task();
+    virtual ~clsBaseEffect_Task() {}
     virtual void execute();
     virtual void draw();
 
