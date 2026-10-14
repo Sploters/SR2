@@ -49,7 +49,7 @@ public:
     };
 
     clsFSecurityGate_Obj() {}
-    virtual ~clsFSecurityGate_Obj() {}
+    virtual ~clsFSecurityGate_Obj() { destroyData(); }
 
     virtual void createData();
     virtual void destroyData();

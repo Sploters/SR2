@@ -25,7 +25,7 @@ public:
     };
 
     clsGLinkWaterSphere_Object() {}
-    virtual ~clsGLinkWaterSphere_Object();
+    virtual ~clsGLinkWaterSphere_Object() {}
     virtual void reset();
     virtual void setData();
     virtual void createData();

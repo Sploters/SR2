@@ -77,7 +77,7 @@ public:
 
     clsSurvivalBallBall_Obj();
 
-    virtual ~clsSurvivalBallBall_Obj() {}
+    virtual ~clsSurvivalBallBall_Obj() { destroyData(); }
     virtual void contactTriggerEvent(hkContactPoint* pParam1, clsObject* pParam2);
     virtual void createData();
     virtual void destroyData();

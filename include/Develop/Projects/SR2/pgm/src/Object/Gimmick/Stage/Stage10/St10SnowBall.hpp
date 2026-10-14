@@ -19,7 +19,7 @@ public:
         MODE_GRAVITY = 2,
     };
 
-    virtual ~clsSnowBall_Obj() {}
+    virtual ~clsSnowBall_Obj() { destroyData(); }
     virtual nspPackId::enm getPackId() const
     {
         return nspPackId::ST10_SNOWBALL_20010;

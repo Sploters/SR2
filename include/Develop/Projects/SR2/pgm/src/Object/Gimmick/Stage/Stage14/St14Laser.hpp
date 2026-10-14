@@ -27,7 +27,7 @@ public:
     };
 
     clsSt14Laser_Obj() {}
-    virtual ~clsSt14Laser_Obj() {}
+    virtual ~clsSt14Laser_Obj() { destroyData(); }
     virtual void setData();
     virtual void createData();
     virtual void destroyData();

@@ -33,7 +33,7 @@ public:
     };
 
     clsBunki_Obj() {}
-    virtual ~clsBunki_Obj() {}
+    virtual ~clsBunki_Obj() { destroyData(); }
     // RECONSTRUCTED: enum scope.
     enum enmAiMode {
         AIMODE_MAIN = 0,
