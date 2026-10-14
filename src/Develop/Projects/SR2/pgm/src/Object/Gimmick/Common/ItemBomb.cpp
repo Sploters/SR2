@@ -1,5 +1,6 @@
 #include "Develop/Projects/SR2/pgm/src/Object/Gimmick/Common/ItemBomb.hpp"
 #include "Develop/Projects/SR2/pgm/src/Object/ModelTypes.hpp"
+#include "Develop/Projects/SR2/pgm/src/Object/Gimmick/Control/Se3DControl.hpp"
 
 clsModelType_OB_TX_MO_MA clsItemBomb_Task::t_cModel;
 clsModelType_OB_TX_MO_MA clsItemBomb_Task::t_cExpModel;
@@ -15,6 +16,7 @@ clsItemBomb_Obj::clsItemBomb_Obj(clsItemBomb_Task* pParam1,
 
 clsItemBomb_Obj::~clsItemBomb_Obj()
 {
+    m_pcSe3DControl->stopAll();
     destroyData();
 }
 
