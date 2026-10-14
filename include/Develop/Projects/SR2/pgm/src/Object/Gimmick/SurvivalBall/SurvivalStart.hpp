@@ -14,7 +14,7 @@ class clsPlaySe_2D;
 class clsSurvivalBallStart_Obj : public clsPhantomGimmickObject {
 public:
     clsSurvivalBallStart_Obj();
-    virtual ~clsSurvivalBallStart_Obj() {}
+    virtual ~clsSurvivalBallStart_Obj() { destroyData(); }
     virtual nspPackId::enm getPackId() const { return nspPackId::SURVIVALBALL_START_28030; }
     virtual void contactTriggerEvent(hkContactPoint* pcContact, clsObject* pcObject);
     virtual void contactAlwaysEvent(hkContactPoint* pcObject, clsObject* pParam2);

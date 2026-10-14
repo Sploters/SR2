@@ -56,7 +56,7 @@ public:
     };
 
     clsPillar_Obj() {}
-    virtual ~clsPillar_Obj() {}
+    virtual ~clsPillar_Obj() { destroyData(); }
 
     virtual void destroyData();
     virtual nspPackId::enm getPackId() const { return nspPackId::ST13_PILLAR_23070; }

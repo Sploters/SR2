@@ -41,7 +41,7 @@ public:
     clsSe3DControl* m_pcSe3DControl; // offset 0x300, size 0x4
 
     clsMapPartsFloorSwitch_Object() {}
-    virtual ~clsMapPartsFloorSwitch_Object() {}
+    virtual ~clsMapPartsFloorSwitch_Object() { destroyData(); }
     enmState getState() const { return m_eState; }
 
     void extensionActiveFrame();

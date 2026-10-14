@@ -58,6 +58,7 @@ clsSignBoard_Obj::clsSignBoard_Obj() : m_eSignBoardMode(MODE_INIT)
 
 clsSignBoard_Obj::~clsSignBoard_Obj()
 {
+    destroyData();
 }
 
 inline nspPackId::enm clsSignBoard_Obj::getPackId() const

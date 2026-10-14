@@ -23,4 +23,5 @@ clsRotFallGLinkManager_Object::clsRotFallGLinkManager_Object()
 
 clsRotFallGLinkManager_Object::~clsRotFallGLinkManager_Object()
 {
+    destroyData();
 }

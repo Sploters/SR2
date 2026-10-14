@@ -20,7 +20,7 @@ class clsFallSnowBall_Obj : public clsRigidBodyGimmickObj {
 public:
     clsFallSnowBall_Obj();
 
-    virtual ~clsFallSnowBall_Obj() {}
+    virtual ~clsFallSnowBall_Obj() { destroyData(); }
     virtual void createData();
     virtual void destroyData();
     virtual nspPackId::enm getPackId() const { return nspPackId::ST10_FALL_SNOWBALL_20020; }

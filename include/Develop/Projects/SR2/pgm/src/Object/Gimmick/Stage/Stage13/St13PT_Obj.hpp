@@ -15,7 +15,7 @@ class hkShape;
 class clsSt13PTObj_Obj : public clsRigidBodyGimmickObj {
 public:
     inline clsSt13PTObj_Obj() : clsRigidBodyGimmickObj() {}
-    virtual ~clsSt13PTObj_Obj() {}
+    virtual ~clsSt13PTObj_Obj() { destroyData(); }
 
     enum enmPTObjMode {
         MODE_INIT = 0,

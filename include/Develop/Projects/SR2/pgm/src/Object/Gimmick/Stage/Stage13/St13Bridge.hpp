@@ -39,7 +39,7 @@ public:
     };
 
     clsBridge_Obj() {}
-    virtual ~clsBridge_Obj() {}
+    virtual ~clsBridge_Obj() { destroyData(); }
 
     enmBridgeMode m_eMode;                    // offset 0x50, size 0x4
     enmBridgeState m_eState;                  // offset 0x54, size 0x4

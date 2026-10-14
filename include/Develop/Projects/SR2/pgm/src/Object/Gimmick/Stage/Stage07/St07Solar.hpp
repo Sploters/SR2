@@ -24,7 +24,7 @@ public:
     static f32 t_of32CLIP_DISTx2;
 
     clsSolar_Obj();
-    virtual ~clsSolar_Obj() {}
+    virtual ~clsSolar_Obj() { destroyData(); }
     virtual void setData();
     virtual void createData();
     virtual void destroyData();

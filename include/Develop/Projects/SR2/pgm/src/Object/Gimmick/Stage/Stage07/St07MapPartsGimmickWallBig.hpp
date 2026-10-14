@@ -12,7 +12,7 @@ class hkTransformShape;
 class clsMapPartsGimmickWallBig_Object : public clsMapPartsGimmickWall_Object {
 public:
     clsMapPartsGimmickWallBig_Object() {}
-    virtual ~clsMapPartsGimmickWallBig_Object() {}
+    virtual ~clsMapPartsGimmickWallBig_Object() { destroyData(); }
 
     virtual void createData();
     virtual void destroyData();

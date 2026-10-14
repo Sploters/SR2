@@ -26,4 +26,5 @@ clsRotFallManager_Object::clsRotFallManager_Object()
 
 clsRotFallManager_Object::~clsRotFallManager_Object()
 {
+    destroyData();
 }

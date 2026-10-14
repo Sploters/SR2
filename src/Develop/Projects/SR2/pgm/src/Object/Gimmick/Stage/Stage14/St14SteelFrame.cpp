@@ -41,6 +41,7 @@ clsSteelFrame_Obj::clsSteelFrame_Obj() : clsRigidBodyGimmickObj(), m_eSteelFrame
 
 clsSteelFrame_Obj::~clsSteelFrame_Obj()
 {
+    destroyData();
 }
 
 void clsSteelFrame_Obj::init()

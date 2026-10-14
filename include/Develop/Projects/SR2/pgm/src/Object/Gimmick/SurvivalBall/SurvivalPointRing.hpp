@@ -39,7 +39,7 @@ enum enmSurvivalBallPointRingPoint {
 class clsSurvivalBallPointRing_Obj : public clsRigidBodyGimmickObj {
 public:
     clsSurvivalBallPointRing_Obj();
-    virtual ~clsSurvivalBallPointRing_Obj() {}
+    virtual ~clsSurvivalBallPointRing_Obj() { destroyData(); }
 
     u8 m_enMode;                                            // offset 0xD0, size 0x4
     u8 m_enPointType;                                       // offset 0xD4, size 0x4

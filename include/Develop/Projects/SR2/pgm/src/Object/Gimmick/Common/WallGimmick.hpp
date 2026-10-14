@@ -27,7 +27,7 @@ public:
     // Weak/inline functions
 public:
     inline clsWallGimmick_Obj() {}
-    virtual ~clsWallGimmick_Obj() {}
+    virtual ~clsWallGimmick_Obj() { destroyData(); }
     u32 getMultiDrawNum() const { return m_u32Num; }
     nspPackId::enm getPackId() const { return nspPackId::WALL_GIMMICK_2170; }
 

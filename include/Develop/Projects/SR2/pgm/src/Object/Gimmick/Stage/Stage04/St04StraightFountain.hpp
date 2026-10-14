@@ -37,7 +37,7 @@ public:
     };
 
     clsStraightFountain_Obj() {}
-    virtual ~clsStraightFountain_Obj() {}
+    virtual ~clsStraightFountain_Obj() { destroyData(); }
 
     enmStraightFountainMode getMode() const { return m_eMode; }
     enmStraightFountainState getState() const { return m_eState; }

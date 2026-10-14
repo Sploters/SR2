@@ -48,4 +48,5 @@ clsPathSecurityRobo_Obj::clsPathSecurityRobo_Obj()
 
 clsPathSecurityRobo_Obj::~clsPathSecurityRobo_Obj()
 {
+    destroyData();
 }

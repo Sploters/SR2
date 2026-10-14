@@ -43,7 +43,7 @@ public:
     static u32 otau32Se_CanoeL[2];
 
     clsPathCanoe_Obj() : clsRigidBodyGimmickObj() {}
-    virtual ~clsPathCanoe_Obj() {}
+    virtual ~clsPathCanoe_Obj() { destroyData(); }
     virtual void contactTriggerEvent(hkContactPoint* pParam1, clsObject* pParam2);
     virtual void setData();
     virtual void createData();

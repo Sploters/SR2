@@ -125,7 +125,7 @@ public:
     };
 
     clsFan_Obj() {}
-    virtual ~clsFan_Obj() {}
+    virtual ~clsFan_Obj() { destroyData(); }
 
     virtual void createData();
     virtual void destroyData();

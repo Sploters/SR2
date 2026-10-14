@@ -29,7 +29,7 @@ public:
     };
 
     clsFountain_Obj() {}
-    virtual ~clsFountain_Obj() {}
+    virtual ~clsFountain_Obj() { destroyData(); }
     virtual void setData();
     virtual void createData();
     virtual void destroyData();

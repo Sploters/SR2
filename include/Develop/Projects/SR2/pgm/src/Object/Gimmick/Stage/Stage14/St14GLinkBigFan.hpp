@@ -106,7 +106,7 @@ public:
     };
 
     clsGLinkFan_Object() {}
-    virtual ~clsGLinkFan_Object() {}
+    virtual ~clsGLinkFan_Object() { destroyData(); }
     virtual void setData();
     virtual void createData();
     virtual void destroyData();

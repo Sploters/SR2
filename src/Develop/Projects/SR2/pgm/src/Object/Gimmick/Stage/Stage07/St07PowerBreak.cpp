@@ -51,6 +51,7 @@ clsSt07PowerBreak_Obj::clsSt07PowerBreak_Obj()
 
 clsSt07PowerBreak_Obj::~clsSt07PowerBreak_Obj()
 {
+    destroyData();
 }
 
 void clsSt07PowerBreak_Obj::init()

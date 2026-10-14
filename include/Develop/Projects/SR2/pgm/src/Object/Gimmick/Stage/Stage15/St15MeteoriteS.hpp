@@ -24,7 +24,7 @@ enum enmMeteoriteSMode {
 class clsMeteoriteS_Obj : public clsRigidBodyGimmickObj {
 public:
     clsMeteoriteS_Obj() {}
-    virtual ~clsMeteoriteS_Obj() {}
+    virtual ~clsMeteoriteS_Obj() { destroyData(); }
     virtual void setData();
     virtual void createData();
     virtual void destroyData();

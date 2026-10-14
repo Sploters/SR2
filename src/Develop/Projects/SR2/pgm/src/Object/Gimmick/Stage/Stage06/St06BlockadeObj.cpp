@@ -41,6 +41,7 @@ clsBlockadeObj_Obj::clsBlockadeObj_Obj() : m_eBlockadeObjMode(BLOCK_MODE_INIT)
 
 clsBlockadeObj_Obj::~clsBlockadeObj_Obj()
 {
+    destroyData();
 }
 
 inline void clsBlockadeObj_Obj::reset()

@@ -15,7 +15,7 @@ class clsSe3DControl;
 class clsMapPartsFloorGravity_Object : public clsMapPartsObject {
 public:
     inline clsMapPartsFloorGravity_Object() : clsMapPartsObject() {}
-    virtual ~clsMapPartsFloorGravity_Object() {}
+    virtual ~clsMapPartsFloorGravity_Object() { destroyData(); }
 
     u8 m_StateChangeFlag;            // offset 0xE0, size 0x1
     f32 m_sEffectMtx[4][4];          // offset 0xF0, size 0x40

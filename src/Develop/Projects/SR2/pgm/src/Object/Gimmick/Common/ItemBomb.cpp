@@ -15,6 +15,7 @@ clsItemBomb_Obj::clsItemBomb_Obj(clsItemBomb_Task* pParam1,
 
 clsItemBomb_Obj::~clsItemBomb_Obj()
 {
+    destroyData();
 }
 
 void clsItemBomb_Obj::reset()

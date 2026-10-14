@@ -51,7 +51,7 @@ enum enmGPFanMode {
 class clsGPFan_Obj : public clsRigidBodyGimmickObj {
 public:
     inline clsGPFan_Obj() : clsRigidBodyGimmickObj() {}
-    virtual ~clsGPFan_Obj() {}
+    virtual ~clsGPFan_Obj() { destroyData(); }
 
     enum enmGPFanMode m_eGPFanMode;  // offset 0xD0, size 0x4
     f32 m_f32MotFrame;               // offset 0xD4, size 0x4

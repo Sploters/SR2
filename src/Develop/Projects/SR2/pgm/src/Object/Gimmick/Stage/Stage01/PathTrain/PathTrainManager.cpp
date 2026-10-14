@@ -59,4 +59,5 @@ clsPathTrain_Obj::clsPathTrain_Obj()
 
 clsPathTrain_Obj::~clsPathTrain_Obj()
 {
+    destroyData();
 }

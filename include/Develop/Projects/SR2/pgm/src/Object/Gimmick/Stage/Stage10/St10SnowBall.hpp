@@ -18,7 +18,7 @@ enum enmSnowBallMode {
 // total size: 0x130
 class clsSnowBall_Obj : public clsRigidBodyGimmickObj {
 public:
-    virtual ~clsSnowBall_Obj() {}
+    virtual ~clsSnowBall_Obj() { destroyData(); }
     virtual nspPackId::enm getPackId() const
     {
         return nspPackId::ST10_SNOWBALL_20010;

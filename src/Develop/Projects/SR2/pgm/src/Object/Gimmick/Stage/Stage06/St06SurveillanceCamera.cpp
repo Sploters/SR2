@@ -44,6 +44,7 @@ clsSurveillanceCamera_Obj::clsSurveillanceCamera_Obj()
 
 clsSurveillanceCamera_Obj::~clsSurveillanceCamera_Obj()
 {
+    destroyData();
 }
 
 void clsSurveillanceCamera_Obj::init()
