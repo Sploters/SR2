@@ -35,7 +35,7 @@ void clsBlockadeObj_Task::draw()
 {
 }
 
-clsBlockadeObj_Obj::clsBlockadeObj_Obj()
+clsBlockadeObj_Obj::clsBlockadeObj_Obj() : m_eBlockadeObjMode(BLOCK_MODE_INIT)
 {
 }
 

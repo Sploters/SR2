@@ -56,7 +56,7 @@ public:
 class clsMultiObTxModels {
 public:
     clsMultiObTxModels() {}
-    virtual ~clsMultiObTxModels() {}
+    ~clsMultiObTxModels() {}
 
     void createModels(stcBinInfo& rsBinInfoI, u32 u32CalcObjNum);
 

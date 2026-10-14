@@ -52,7 +52,7 @@ void clsSignBoard_Task::draw()
 {
 }
 
-clsSignBoard_Obj::clsSignBoard_Obj()
+clsSignBoard_Obj::clsSignBoard_Obj() : m_eSignBoardMode(MODE_INIT)
 {
 }
 

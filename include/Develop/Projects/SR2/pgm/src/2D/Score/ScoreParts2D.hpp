@@ -106,7 +106,7 @@ public:
         f32 f32BackGroundWidth; // offset 0x1C, size 0x4
         f32 f32EnergyFrameMax;  // offset 0x20, size 0x4
         s32 s32RingRot;         // offset 0x24, size 0x4
-        f32 sRingMtx[4][4];     // offset 0x30, size 0x40
+        f32 sRingMtx[4][4] __attribute__((aligned(16))); // offset 0x30, size 0x40
         u8 FrameTexNo;          // offset 0x70, size 0x1
         u8 FrameLineTexNo;      // offset 0x71, size 0x1
         u8 NumBackTexNo;        // offset 0x72, size 0x1
@@ -135,6 +135,13 @@ public:
         clsEnergyFlow2D* pcAddLine;         // offset 0x7C, size 0x4
         stcLinePoint asPoint[4];            // offset 0x80, size 0x30
     };
+
+    clsScore2D_Task* m_pcParent;     // offset 0x0, size 0x4
+    u8 m_bDraw;                      // offset 0x4, size 0x1
+    stcPartsData* m_opsDrawData;     // offset 0x8, size 0x4
+    stcUnionStatus m_sUnionStatus;   // offset 0x10, size 0x80
+    stcUserStatus m_asUserStatus[4]; // offset 0x90, size 0x2C0
+    // vtable pointer: offset 0x350
 
     virtual ~clsScoreParts2D();
     virtual void draw();
@@ -189,12 +196,6 @@ public:
     void _drawSelectLine(
         s32 s32PosX, s32 s32PosY, s32 s32Dir, clsPlayerTask* pcPlayer, stcUserStatus* psUserSt);
     void drawParts(u32 u32View, u32 u32PlayerNo);
-
-    clsScore2D_Task* m_pcParent;     // offset 0x0, size 0x4
-    u8 m_bDraw;                      // offset 0x4, size 0x1
-    stcPartsData* m_opsDrawData;     // offset 0x8, size 0x4
-    stcUnionStatus m_sUnionStatus;   // offset 0x10, size 0x80
-    stcUserStatus m_asUserStatus[4]; // offset 0x90, size 0x2C0
 };
 
 #endif // SCOREPARTS2D_HPP

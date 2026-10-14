@@ -44,7 +44,8 @@ void clsSt07PowerBreak_Task::draw()
 {
 }
 
-clsSt07PowerBreak_Obj::clsSt07PowerBreak_Obj() : clsRigidBodyGimmickObj()
+clsSt07PowerBreak_Obj::clsSt07PowerBreak_Obj()
+    : clsRigidBodyGimmickObj(), m_eMode(MODE_MAIN), m_pcSe3DControl(0)
 {
 }
 

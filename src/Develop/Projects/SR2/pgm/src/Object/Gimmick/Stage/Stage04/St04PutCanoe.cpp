@@ -50,7 +50,7 @@ void clsPutCanoe_Task::draw()
 {
 }
 
-clsPutCanoe_Obj::clsPutCanoe_Obj()
+clsPutCanoe_Obj::clsPutCanoe_Obj() : m_eMode(MODE_MAIN)
 {
 }
 

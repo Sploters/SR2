@@ -49,7 +49,7 @@ void clsPutCanoeMotion_Task::draw()
 {
 }
 
-clsPutCanoeMotion_Obj::clsPutCanoeMotion_Obj()
+clsPutCanoeMotion_Obj::clsPutCanoeMotion_Obj() : m_eMode(MODE_INIT)
 {
 }
 

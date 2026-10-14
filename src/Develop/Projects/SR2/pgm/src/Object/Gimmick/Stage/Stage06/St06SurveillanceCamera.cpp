@@ -37,7 +37,8 @@ void clsSurveillanceCamera_Task::draw()
 {
 }
 
-clsSurveillanceCamera_Obj::clsSurveillanceCamera_Obj() : clsRigidBodyGimmickObj()
+clsSurveillanceCamera_Obj::clsSurveillanceCamera_Obj()
+    : clsRigidBodyGimmickObj(), m_pcSe3DControl(0), m_eSCameraMode(MODE_INIT)
 {
 }
 
