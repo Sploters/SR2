@@ -62,12 +62,15 @@ struct stcPoint2D_s16 {
 } // namespace nspOOMisc
 typedef nspOOMisc::stcPoint2D_s16 stcPoint2D_s16;
 
+namespace nspEnergyFlow2D {
 // total size: 0xC
 struct stcLinePoint {
     f32 f32Frame;           // offset 0x0, size 0x4
     stcPoint2D_s16 sFast;   // offset 0x4, size 0x4
     stcPoint2D_s16 sSecond; // offset 0x8, size 0x4
 };
+} // namespace nspEnergyFlow2D
+typedef nspEnergyFlow2D::stcLinePoint stcLinePoint;
 
 // total size: 0x360
 class clsScoreParts2D {

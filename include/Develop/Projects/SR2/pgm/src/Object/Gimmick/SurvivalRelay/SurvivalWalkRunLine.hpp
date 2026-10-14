@@ -35,7 +35,7 @@ public:
 
     // Virtual functions
 public:
-    inline clsSurvivalRelayWalkRunLine_Obj(int s32TeamNo) : clsGimmickObj() {}
+    clsSurvivalRelayWalkRunLine_Obj(int s32TeamNo);
     virtual ~clsSurvivalRelayWalkRunLine_Obj();
 
     void reset();

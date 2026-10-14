@@ -141,7 +141,7 @@ public:
 // total size: 0x6C
 class clsSaveDataCtrl {
 public:
-    inline clsSaveDataCtrl();
+    clsSaveDataCtrl();
 
     stcSaveGameData* m_psSaveData;        // offset 0x0, size 0x4
     stcGameData* m_psGameData;            // offset 0x4, size 0x4
@@ -186,7 +186,7 @@ public:
     void SetAllMissinSelFlag();
     void SetAllTutorialSelFlag();
     void SetAllGameFlag();
-    u8 CheckSaveDataCrc(const void* pvParam1) const;
+    u8 CheckSaveDataCrc(const void* pvParam1);
     inline u8 IsGearUnlock(u32 u32Param1) const;
     inline u8 IsCharaUnlock(nspSaveData::enmUnlockChara) const;
 };

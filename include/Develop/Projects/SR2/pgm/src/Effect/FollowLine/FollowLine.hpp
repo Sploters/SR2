@@ -62,7 +62,7 @@ public:
 
     virtual ~clsBackLineEffectTask();
 
-    clsBackLineEffectTask(u8 u8Type, const stcParam* opsParam, s32 s32SubNo) : clsTask(0, 0) {}
+    clsBackLineEffectTask(u8 u8Type, const stcParam* opsParam, s32 s32SubNo);
 
     virtual void execute();
     virtual void draw();

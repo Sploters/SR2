@@ -57,8 +57,8 @@ public:
     virtual void createData();
     virtual void destroyData();
     virtual void requestPowerTypeSe(clsPlayerTask* pParam1);
-    inline void SetWaitMode(f32 f32Param1) {}
-    inline void SetReversMode(f32 f32Param1) {}
+    void SetWaitMode(f32 f32Param1);
+    void SetReversMode(f32 f32Param1);
     inline void setAiMode(enmAiMode) {}
     inline enmAiMode getAiMode() const { return AIMODE_MAIN; }
     inline nspPackId::enm getPackId() const { return nspPackId::ST13_PT_OBJ_23080; }

@@ -62,8 +62,8 @@ public:
     u8 m_bPlayerLock;                              // offset 0x300, size 0x1
     u8 m_u8ContactSeCount;                         // offset 0x301, size 0x1
 
-    clsPathSecurityRobo_Obj() {}
-    virtual ~clsPathSecurityRobo_Obj() {}
+    clsPathSecurityRobo_Obj();
+    virtual ~clsPathSecurityRobo_Obj();
     virtual void init() {}
     virtual nspPackId::enm getPackId() const { return nspPackId::ST01_PRODUCTION_ROBO_11050; }
     virtual void contactTriggerEvent(hkContactPoint* pcContact, clsObject* pcObject);
