@@ -35,6 +35,8 @@ public:
 
     virtual void execute() {}
     virtual void draw() {}
+    virtual void createModel(stcBinInfo& rsBinInfoI) = 0;
+    virtual void setSetData(const stcSetDataDetail& rsSetDataDetailI) = 0;
 
     void loadBinary(stcBinInfo&)
     {
